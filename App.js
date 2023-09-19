@@ -9,20 +9,15 @@ import AppButton from './app/components/AppButton';
 export default function App() {
   return (
     // <ViewImageScreen />
-    // <WelcomeScreen />
-    <View style={styles.container}>
-      <AppText >I love React Native</AppText>
-      <AppButton title="Login" onPress={() => console.log('tapped')}/>
-      <Text>What happen</Text>
-    </View>
+    <WelcomeScreen />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    paddingTop: Platform.OS === 'android' ? 50 : 0
-  }
-})
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     alignItems: "center",
+//     paddingTop: Platform.OS === 'android' ? 50 : 0
+//   }
+// })
 
