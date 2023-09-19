@@ -10,3 +10,9 @@ export default function App() {
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: Platform.OS === 'android' ? 50 : 0
+  }
+})
+
