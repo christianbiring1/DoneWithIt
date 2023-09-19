@@ -1,4 +1,5 @@
 import React from 'react';
+import colors from '../config/colors';
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 
 function WelcomeScreen(props) {
@@ -9,7 +10,7 @@ function WelcomeScreen(props) {
     >
       <View style={styles.logoContainer}>
       <Image style={styles.logo} source={require('../assets/favicon.png')}/>
-      <Text>Reach out and give what you don't need'</Text>
+      <Text style={styles.text}>We Should see giving to others as an assignment from God</Text>
       </View>
     <View style={styles.loginButton}></View>
     <View style={styles.registerButton}></View>
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
   loginButton: {
     width: '100%',
     height: 70,
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
   },
   logo: {
     width: 100,
@@ -42,6 +43,13 @@ const styles = StyleSheet.create({
   registerButton: {
     width: '100%',
     height: 70,
-    backgroundColor: "#4ecdc4",
+    backgroundColor: colors.secondary,
+  },
+  text: {
+    fontSize: 20,
+    // color: colors.black,
+    color: 'tomato',
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
 })
