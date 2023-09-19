@@ -1,20 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, Platform, Dimensions } from 'react-native';
+import WelcomeScreen from './app/screen/WelcomeScreen';
 
 export default function App() {
+  // console.log(Dimensions.get("window"));
   return (
-    <View style={styles.container}>
-      <Text>Yeah Dit it mate</Text>
-      <StatusBar style="auto" />
-    </View>
+    <WelcomeScreen />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
