@@ -13,17 +13,12 @@ import ViewImageScreen from './app/screen/ViewImageScreen';
 import ListingDetailsScreen from './app/screen/ListingDetailsScreen';
 import MessagesScreen from './app/screen/MessagesScreen';
 import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screen/AccountScreen';
 
 export default function App() {
   return (
     <GestureHandlerRootView>
-      <Screen>
-        <ListItem
-          title="My title"
-          // subTitle="My subTitle"
-          ImageComponent={<Icon name="email" />}
-        />
-      </Screen>
+      <AccountScreen />
     </GestureHandlerRootView>
       // <MessagesScreen />
       // <Icon name="email" size={100}/>
