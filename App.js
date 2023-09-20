@@ -14,11 +14,13 @@ import ListingDetailsScreen from './app/screen/ListingDetailsScreen';
 import MessagesScreen from './app/screen/MessagesScreen';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screen/AccountScreen';
+import ListingsScreen from './app/screen/ListingsScreen';
 
 export default function App() {
   return (
     <GestureHandlerRootView>
-      <AccountScreen />
+      {/* <AccountScreen /> */}
+      <ListingsScreen />
     </GestureHandlerRootView>
       // <MessagesScreen />
       // <Icon name="email" size={100}/>
