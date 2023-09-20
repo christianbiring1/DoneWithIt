@@ -1,13 +1,14 @@
 import React from 'react';
-import { Image , StyleSheet, View} from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { Image , SafeAreaView, StyleSheet, View} from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Constants from 'expo-constants';
 
 
 import colors from '../config/colors';
 
 function ViewImageScreen(props) {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.closeIcon}>
         <MaterialCommunityIcons name='close' color="white" size={35} />
       </View>
@@ -15,7 +16,7 @@ function ViewImageScreen(props) {
         <MaterialCommunityIcons name='trash-can-outline' color="white" size={35} />
       </View>
       <Image resizeMode='contain' style={styles.image} source={require("../assets/chair-image.jpeg")}/>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -24,8 +25,8 @@ export default ViewImageScreen;
 const styles = StyleSheet.create({
   closeIcon: {
     position: "absolute",
+    top: Constants.statusBarHeight,
     left: 20,
-    top: 50
   },
   container: {
     backgroundColor: colors.black,
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
   deleteIcon: {
     position: "absolute",
     right: 20,
-    top: 50
+    top: Constants.statusBarHeight
   },
   image: {
     width: "100%",
