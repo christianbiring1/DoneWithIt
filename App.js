@@ -11,8 +11,8 @@ import MessagesScreen from './app/screen/MessagesScreen';
 
 export default function App() {
   return (
-    // <MessagesScreen />
-    <ViewImageScreen />
+    <MessagesScreen />
+    // <ViewImageScreen />
     // <WelcomeScreen />
     // <View style={{
     //   backgroundColor: "#f8f4f4",
