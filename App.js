@@ -5,6 +5,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import AppText from './app/components/AppText/AppText';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
+import Icon from './app/components/Icon';
 
 import WelcomeScreen from './app/screen/WelcomeScreen';
 import ViewImageScreen from './app/screen/ViewImageScreen';
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <MessagesScreen />
+      <Icon name="email" size={100}/>
     </GestureHandlerRootView>
     // <ViewImageScreen />
     // <WelcomeScreen />
