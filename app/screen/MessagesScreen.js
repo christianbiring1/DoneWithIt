@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet, View, RefreshControl } from 'react-native';
 
 
 import ListItem from '../components/ListItem';
@@ -23,7 +23,8 @@ const initialsMessages = [
   }
 ];
 function MessagesScreen(props) {
-  const [messages, setMessages] = useState(initialsMessages)
+  const [messages, setMessages] = useState(initialsMessages);
+  const [refreshing, setRefreshing] = useState(false);
 
   const handleDelete = message => {
     const newMessages = messages.filter(m => m.id !== message.id);
@@ -31,9 +32,25 @@ function MessagesScreen(props) {
     // Call the Server
   }
 
+  const onRefresh = () => {
+    // Refresh logic here
+    // For example: fetch new data and update the 'messages' state.
+    setMessages([{
+      id: 2,
+      title: 'T2',
+      description: 'D2',
+      image: require('../assets/chris.jpg')
+    }])
+    setRefreshing(true)
+
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 1000)
+  }
+
 
   return (
-    <Screen style={styles.screen}>
+    <Screen>
         <FlatList
           data={messages}
           keyExtractor={message => message.id.toString()}
@@ -49,6 +66,9 @@ function MessagesScreen(props) {
             />
           }
           ItemSeparatorComponent={ListItemSeparator}
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }
         />
     </Screen>
   );
