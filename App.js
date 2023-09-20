@@ -10,7 +10,7 @@ import ListingDetailsScreen from './app/screen/ListingDetailsScreen';
 
 export default function App() {
   return (
-    // <ViewImageScreen />
+    <ViewImageScreen />
     // <WelcomeScreen />
     // <View style={{
     //   backgroundColor: "#f8f4f4",
@@ -23,7 +23,7 @@ export default function App() {
     //     image={require("./app/assets/chris.jpg")}
     //   />
     // </View>
-    <ListingDetailsScreen />
+    // <ListingDetailsScreen />
   );
 }
 
