@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Platform, Text } from 'react-native';
+import { StyleSheet, View, Platform, Text, TextInput } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 import AppText from './app/components/AppText/AppText';
@@ -15,13 +15,17 @@ import MessagesScreen from './app/screen/MessagesScreen';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screen/AccountScreen';
 import ListingsScreen from './app/screen/ListingsScreen';
+import AppTextInput from './app/components/AppTextInput';
 
 export default function App() {
   return (
     <GestureHandlerRootView>
-      {/* <AccountScreen /> */}
-      <ListingsScreen />
+      <Screen>
+        <AppTextInput placeholder="UserName" icon="email" />
+      </Screen>
     </GestureHandlerRootView>
+      // <ListingsScreen />
+      // <AccountScreen />
       // <MessagesScreen />
       // <Icon name="email" size={100}/>
     // <ViewImageScreen />
