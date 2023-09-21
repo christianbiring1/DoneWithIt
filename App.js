@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Platform, Text, TextInput } from 'react-native';
+import { Switch } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 import AppText from './app/components/AppText';
@@ -16,14 +16,20 @@ import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screen/AccountScreen';
 import ListingsScreen from './app/screen/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
+import { useState } from 'react';
 
 export default function App() {
+  const [isNew, setIsNew] = useState(false);
   return (
     <GestureHandlerRootView>
       <Screen>
-        <AppTextInput placeholder="UserName" icon="email" />
+        <Switch
+          value={isNew}
+          onValueChange={(newValue) => setIsNew(newValue)}
+        />
       </Screen>
     </GestureHandlerRootView>
+      // <AppTextInput placeholder="UserName" icon="email" />
       // <ListingsScreen />
       // <AccountScreen />
       // <MessagesScreen />
