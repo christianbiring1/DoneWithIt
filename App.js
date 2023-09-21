@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Platform, Text, TextInput } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
-import AppText from './app/components/AppText/AppText';
+import AppText from './app/components/AppText';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import Icon from './app/components/Icon';
