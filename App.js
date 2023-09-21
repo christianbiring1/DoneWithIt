@@ -18,11 +18,26 @@ import ListingsScreen from './app/screen/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 
+const categories = [
+  {
+    label: "Furniture",
+    value: 1
+  },
+  {
+    label: "Clothing",
+    value: 2
+  },
+  {
+    label: "Cameras",
+    value: 3
+  }
+]
+
 export default function App() {
   return (
     <GestureHandlerRootView>
       <Screen>
-        <AppPicker icon="apps" placeholder="Category"/>
+        <AppPicker icon="apps" items={categories} placeholder="Category"/>
         <AppTextInput  icon="email" placeholder="Email"/>
       </Screen>
     </GestureHandlerRootView>
