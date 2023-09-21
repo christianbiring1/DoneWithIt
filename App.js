@@ -17,6 +17,7 @@ import AccountScreen from './app/screen/AccountScreen';
 import ListingsScreen from './app/screen/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
+import { useState } from 'react';
 
 const categories = [
   {
@@ -34,10 +35,14 @@ const categories = [
 ]
 
 export default function App() {
+  const [category, setCategory] = useState(categories[0])
   return (
     <GestureHandlerRootView>
       <Screen>
-        <AppPicker icon="apps" items={categories} placeholder="Category"/>
+        <AppPicker
+          selectedItem={category}
+          onSelectItem={item => setCategory(item)}
+          icon="apps" items={categories} placeholder="Category"/>
         <AppTextInput  icon="email" placeholder="Email"/>
       </Screen>
     </GestureHandlerRootView>
