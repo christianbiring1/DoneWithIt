@@ -19,6 +19,7 @@ import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import { useState } from 'react';
 import LoginScreen from './app/screen/LoginScreen';
+import ListingEditingScreen from './app/screen/ListingEditingScreen';
 
 const categories = [
   {
@@ -40,9 +41,10 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <Screen>
-        <LoginScreen />
+        <ListingEditingScreen />
       </Screen>
     </GestureHandlerRootView>
+        // <LoginScreen />
         // <AppPicker
         //   selectedItem={category}
         //   onSelectItem={item => setCategory(item)}
