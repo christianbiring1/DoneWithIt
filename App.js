@@ -20,6 +20,7 @@ import AppPicker from './app/components/AppPicker';
 import { useState } from 'react';
 import LoginScreen from './app/screen/LoginScreen';
 import ListingEditingScreen from './app/screen/ListingEditingScreen';
+import RegisterScreen from './app/screen/RegisterScreen';
 
 const categories = [
   {
@@ -41,9 +42,10 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <Screen>
-        <ListingEditingScreen />
+        <RegisterScreen />
       </Screen>
     </GestureHandlerRootView>
+        // <ListingEditingScreen />
         // <LoginScreen />
         // <AppPicker
         //   selectedItem={category}
