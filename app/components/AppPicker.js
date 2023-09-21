@@ -19,7 +19,7 @@ function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
             />
           }
           <AppText style={styles.text}>{selectedItem ? selectedItem.label : placeholder}</AppText>
-          <MaterialCommunityIcons name="chevron-down" size={20} color={defaultStyles.colors.medium}/>
+          <MaterialCommunityIcons name={ modalVisible ? "chevron-up" : "chevron-down"} size={20} color={defaultStyles.colors.medium}/>
         </View>
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType='slide'>
