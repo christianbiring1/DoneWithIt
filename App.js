@@ -37,11 +37,12 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <Screen>
-        <MessagesScreen />
+        <ListingEditingScreen />
       </Screen>
     </GestureHandlerRootView>
       // <ListingEditingScreen />
       // <RegisterScreen />
+      // <MessagesScreen />
         // <LoginScreen />
         // <AppPicker
         //   selectedItem={category}
