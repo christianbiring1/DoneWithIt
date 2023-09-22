@@ -11,14 +11,14 @@ import ListItemDeleteAction from '../components/ListItemDeleteAction';
 const initialsMessages = [
   {
     id: 1,
-    title: 'T1',
-    description: 'D1',
+    title: 'Christian Biringanine',
+    description: 'Hey! Is this item still available?',
     image: require('../assets/chris.jpg')
   },
    {
     id: 2,
-    title: 'T2',
-    description: 'D2',
+    title: 'Christian Biringanine',
+    description: "I'm interested in this item. When will you be able to post it?",
     image: require('../assets/chris.jpg')
   }
 ];
@@ -37,8 +37,8 @@ function MessagesScreen(props) {
     // For example: fetch new data and update the 'messages' state.
     setMessages([{
       id: 2,
-      title: 'T2',
-      description: 'D2',
+      title: 'Christian Biringanine',
+      description: "I'm interested in this item. When will you be able to post it?",
       image: require('../assets/chris.jpg')
     }])
     setRefreshing(true)

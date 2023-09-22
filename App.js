@@ -37,8 +37,7 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <Screen>
-        <ListItem title="T1" subTitle="My subTitle" image={require('./app/assets/chris.jpg')} />
-        <ListItem title="T1" subTitle="My subTitle" image={require('./app/assets/chris.jpg')} />
+        <MessagesScreen />
       </Screen>
     </GestureHandlerRootView>
       // <ListingEditingScreen />
@@ -52,7 +51,6 @@ export default function App() {
       // <AppTextInput placeholder="UserName" icon="email" />
       // <ListingsScreen />
       // <AccountScreen />
-      // <MessagesScreen />
       // <Icon name="email" size={100}/>
     // <ViewImageScreen />
     // <WelcomeScreen />
