@@ -7,7 +7,7 @@ import defaultStyles from '../config/styles';
 import AppText from './AppText';
 import PickerItem from './PickerItem';
 
-function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem, width }) {
+function AppPicker({ icon, items, onSelectItem, PickerItemComponent = PickerItem,placeholder, selectedItem, width = "100%" }) {
   const [modalVisible, setModalVisible] = useState(false)
   return (
     <>
@@ -32,7 +32,8 @@ function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem, width
           data={items}
           keyExtractor={item => item.value.toString()}
           renderItem={({ item }) =>
-            <PickerItem label={item.label}
+            <PickerItemComponent
+              label={item.label}
               onPress={() => {
                 setModalVisible(false);
                 onSelectItem(item);
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     flexDirection: "row",
     alignItems: "center",
-    width: "100%",
+    // width: "100%",
     padding: 15,
     marginVertical: 10
   },
