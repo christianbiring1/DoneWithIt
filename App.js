@@ -2,25 +2,20 @@ import { StatusBar } from 'expo-status-bar';
 import { Switch } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
-import AppText from './app/components/AppText';
-import AppButton from './app/components/AppButton';
-import Card from './app/components/Card';
-import Icon from './app/components/Icon';
 import Screen from './app/components/Screen';
 
 import WelcomeScreen from './app/screen/WelcomeScreen';
 import ViewImageScreen from './app/screen/ViewImageScreen';
 import ListingDetailsScreen from './app/screen/ListingDetailsScreen';
 import MessagesScreen from './app/screen/MessagesScreen';
-import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screen/AccountScreen';
 import ListingsScreen from './app/screen/ListingsScreen';
-import AppTextInput from './app/components/AppTextInput';
-import AppPicker from './app/components/AppPicker';
+
 import { useState } from 'react';
 import LoginScreen from './app/screen/LoginScreen';
 import ListingEditingScreen from './app/screen/ListingEditingScreen';
 import RegisterScreen from './app/screen/RegisterScreen';
+import ListItem from './app/components/ListItem';
 
 const categories = [
   {
@@ -42,10 +37,12 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <Screen>
-        <RegisterScreen />
+        <ListItem title="T1" subTitle="My subTitle" image={require('./app/assets/chris.jpg')} />
+        <ListItem title="T1" subTitle="My subTitle" image={require('./app/assets/chris.jpg')} />
       </Screen>
     </GestureHandlerRootView>
-        // <ListingEditingScreen />
+      // <ListingEditingScreen />
+      // <RegisterScreen />
         // <LoginScreen />
         // <AppPicker
         //   selectedItem={category}
